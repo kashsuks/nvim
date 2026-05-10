@@ -6,6 +6,7 @@ require("lazy").setup({
   require("plugins.lualine"),
   require("plugins.wakatime"),
   require("plugins.noice"),
-  require("plugins.snap")
+  require("plugins.snap"),
+  require("plugins.presence"),
 })
 
