@@ -1,5 +1,5 @@
 require("lazy").setup({
-  require("plugins.gruvbox"),
+  require("plugins.blueberry"),
   require("plugins.sidebar"),
   require("plugins.devicons"),
   require("plugins.nonicons"),
