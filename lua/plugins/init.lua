@@ -5,7 +5,6 @@ require("lazy").setup({
   require("plugins.nonicons"),
   require("plugins.lualine"),
   require("plugins.wakatime"),
-  require("plugins.noice"),
   require("plugins.telescope"),
   require("plugins.presence"),
 })
