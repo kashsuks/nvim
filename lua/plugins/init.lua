@@ -1,6 +1,6 @@
 require("lazy").setup({
   require("plugins.blueberry"),
-  require("plugins.sidebar"),
+  require("plugins.nvim-tree"),
   require("plugins.devicons"),
   require("plugins.nonicons"),
   require("plugins.lualine"),
