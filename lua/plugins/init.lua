@@ -7,6 +7,7 @@ require("lazy").setup({
   require("plugins.devicons"),
   require("plugins.nonicons"),
   require("plugins.lualine"),
+  require("plugins.autopairs"),
   require("plugins.wakatime"),
   require("plugins.telescope"),
   require("plugins.oil"),
