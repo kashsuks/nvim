@@ -1,4 +1,5 @@
 require("lazy").setup({
+  require("plugins.snacks"),
   require("plugins.blueberry"),
   require("plugins.noice"),
   require("plugins.treesitter"),
@@ -8,9 +9,11 @@ require("lazy").setup({
   require("plugins.nonicons"),
   require("plugins.lualine"),
   require("plugins.autopairs"),
+  require("plugins.cmp"),
   require("plugins.wakatime"),
   require("plugins.telescope"),
   require("plugins.oil"),
   require("plugins.presence"),
+  require("plugins.rustaceanvim")
 })
 
