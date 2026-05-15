@@ -14,6 +14,7 @@ require("lazy").setup({
   require("plugins.telescope"),
   require("plugins.oil"),
   require("plugins.presence"),
-  require("plugins.rustaceanvim")
+  require("plugins.rustaceanvim"),
+  require("plugins.fidget")
 })
 
