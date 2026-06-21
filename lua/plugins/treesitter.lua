@@ -8,7 +8,7 @@ return {
     end
 
     treesitter_configs.setup({
-      ensure_installed = { "lua", "python", "vim", "vimdoc" },
+      ensure_installed = { "lua", "python", "vim", "vimdoc", "svelte", "javascript", "typescript", "html", "css" },
       highlight = {
         enable = true,
       },

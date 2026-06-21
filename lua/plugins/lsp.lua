@@ -8,7 +8,7 @@ return {
   config = function()
     require("mason").setup({})
     require("mason-lspconfig").setup({
-      ensure_installed = { "pyright" },
+      ensure_installed = { "pyright", "svelte" },
     })
 
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -17,5 +17,10 @@ return {
       capabilities = capabilities,
     })
     vim.lsp.enable("pyright")
+
+    vim.lsp.config("svelte", {
+      capabilities = capabilities,
+    })
+    vim.lsp.enable("svelte")
   end,
 }
