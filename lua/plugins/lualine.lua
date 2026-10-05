@@ -1,9 +1,10 @@
 return {
   "nvim-lualine/lualine.nvim",
-  requires = { "kyazdani42/nvim-web-devicons", opt = true },
+  dependencies = { "nvim-tree/nvim-web-devicons", "catppuccin/nvim" },
   config = function()
     require("lualine").setup({
       options = {
+        theme = "catppuccin",
         section_separators = '',
         component_separators = '',
       },

@@ -5,22 +5,19 @@ return {
     "williamboman/mason-lspconfig.nvim",
     "hrsh7th/cmp-nvim-lsp",
   },
-  config = function()
+  opts = {
+    servers = { "pyright" },
+  },
+  config = function(_, opts)
     require("mason").setup({})
     require("mason-lspconfig").setup({
-      ensure_installed = { "pyright", "svelte" },
+      ensure_installed = opts.servers,
     })
 
     local capabilities = require("cmp_nvim_lsp").default_capabilities()
-
-    vim.lsp.config("pyright", {
-      capabilities = capabilities,
-    })
-    vim.lsp.enable("pyright")
-
-    vim.lsp.config("svelte", {
-      capabilities = capabilities,
-    })
-    vim.lsp.enable("svelte")
+    for _, server in ipairs(opts.servers) do
+      vim.lsp.config(server, { capabilities = capabilities })
+      vim.lsp.enable(server)
+    end
   end,
 }

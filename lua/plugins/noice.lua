@@ -6,6 +6,9 @@ return {
     "rcarriga/nvim-notify",
   },
   config = function()
+    require("notify").setup({
+      background_colour = require("catppuccin.palettes").get_palette("frappe").mantle,
+    })
     require("noice").setup({
       cmdline = {
         enabled = true,

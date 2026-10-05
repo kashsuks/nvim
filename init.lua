@@ -13,6 +13,7 @@ vim.opt.rtp:prepend(lazypath)
 
 vim.g.mapleader = " "
 
+require("options")
 require("plugins.init")
 require("mapping.init")
 vim.wo.relativenumber = true
