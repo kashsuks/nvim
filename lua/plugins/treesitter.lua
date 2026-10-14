@@ -2,7 +2,7 @@ return {
   "nvim-treesitter/nvim-treesitter",
   build = ":TSUpdate",
   opts = {
-    ensure_installed = { "lua", "python", "vim", "vimdoc" },
+    ensure_installed = { "lua", "python", "vim", "vimdoc", "latex", "bibtex" },
     highlight = { enable = true },
     indent = { enable = true },
   },

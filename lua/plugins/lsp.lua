@@ -6,7 +6,7 @@ return {
     "hrsh7th/cmp-nvim-lsp",
   },
   opts = {
-    servers = { "pyright" },
+    servers = { "pyright", "texlab" },
   },
   config = function(_, opts)
     require("mason").setup({})
@@ -19,5 +19,13 @@ return {
       vim.lsp.config(server, { capabilities = capabilities })
       vim.lsp.enable(server)
     end
+
+    -- solargraph needs Ruby >= 3.1 but the global rbenv Ruby is 3.0.3,
+    -- so it's installed under 3.4.9 instead of through Mason
+    vim.lsp.config("solargraph", {
+      cmd = { vim.fn.expand("~/.rbenv/versions/3.4.9/bin/solargraph"), "stdio" },
+      capabilities = capabilities,
+    })
+    vim.lsp.enable("solargraph")
   end,
 }
