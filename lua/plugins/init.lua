@@ -18,5 +18,4 @@ require("lazy").setup({
     require("plugins.center"),
     require("plugins.vim-doge"),
     require("plugins.catppuccin"),
-    require("plugins.vimtex"),
 })
